@@ -106,4 +106,3 @@ int main() {
         printf("A população da carta 2 venceu! \n");
     }
 }
-   
