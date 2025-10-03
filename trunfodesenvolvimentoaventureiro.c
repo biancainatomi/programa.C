@@ -5,7 +5,7 @@ int main () {
 printf("Carta 1! \n");
 
 // Variáveis da carta 1
-    char Estado1[20];
+    char Pais1[20];
     char codigo1[4];
     char nome1[20];
     unsigned long int populacao1;
@@ -17,7 +17,7 @@ printf("Carta 1! \n");
     float superpoder1;
     
 // Variáveis da carta 2
-    char Estado2[20];
+    char Pais2[20];
     char codigo2[4];
     char nome2[20];
     unsigned long int populacao2;
@@ -32,8 +32,8 @@ printf("Carta 1! \n");
     int escolhaatributo;
 
 
-    printf("Digite o Estado: \n");
-    scanf("%s", Estado1);
+    printf("Digite o País: \n");
+    scanf("%s", Pais1);
 
     printf("Digite o código da carta: \n");
     scanf("%s", codigo1);
@@ -59,7 +59,7 @@ printf("Carta 1! \n");
 
 // Carta 1
 
-    printf("Estado 1: %s - Código da carta 1: %s - Nome da cidade 1: %s \n" , Estado1, codigo1, nome1);
+    printf("País 1: %s - Código da carta 1: %s - Nome da cidade 1: %s \n" , Pais1, codigo1, nome1);
     printf("População 1: %.2lu - Número de pontos turísticos 1: %d \n" , populacao1, ponto1);
     printf("Área em km² 1: %.1f - PIB 1: %.1f \n" , area1, PIB1);
     printf("Densidade populacional 1: %.1f \n", densidade_populacional1);
@@ -69,8 +69,8 @@ printf("Carta 1! \n");
     
     printf("Carta 2! \n");
     
-    printf("Digite o Estado: \n");
-    scanf("%s", Estado2);
+    printf("Digite o País: \n");
+    scanf("%s", Pais2);
 
     printf("Digite o código da carta: \n");
     scanf("%s", codigo2);
@@ -96,7 +96,7 @@ printf("Carta 1! \n");
 
 //Carta 2
 
-    printf("Estado 2: %s - Código da carta 2: %s - Nome da cidade 2: %s \n" , Estado2, codigo2, nome2);
+    printf("País 2: %s - Código da carta 2: %s - Nome da cidade 2: %s \n" , Pais2, codigo2, nome2);
     printf("População 2: %lu - Número de pontos turísticos 2: %d \n" , populacao2, ponto2);
     printf("Área em km² 2: %.1f - PIB 2: %.1f \n" , area2, PIB2);
     printf("Densidade populacional 2: %.1f \n", densidade_populacional2);
@@ -119,52 +119,68 @@ switch (escolhaatributo){
     case 1: 
     if (populacao1 > populacao2) {
         printf("A população da carta 1 venceu!");
-    } else {
+    } else if (populacao1 < populacao2) {
         printf("A população da carta 2 venceu!");
+    } else {
+        printf("Deram empate!");
     }
     break;
     case 2:
     if (area1 > area2) {
         printf("A área em km² da carta 1 venceu!");
-    } else {
+    } else if (area1 < area2) {
         printf("A área em km² da carta 2 venceu!");
+    } else {
+        printf("Deram empate!");
     }
     break;
     case 3:
     if (PIB1 > PIB2) {
         printf("O PIB da carta 1 venceu!");
-    } else {
+    } else if (PIB1 < PIB2) {
         printf("O PIB da carta 2 venceu!");
+    } else {
+        printf("Deram empate!");
     }
     break;
     case 4:
     if (ponto1 > ponto2) {
         printf("O número de pontos turísticos da carta 1 venceu!");
-    } else {
+    } else if (ponto1 < ponto2) {
         printf("O número de pontos turísticos da carta 2 venceu!");
+    } else{
+        printf("Deram empate!");
     }
     break;
     case 5:
    if (densidade_populacional1 < densidade_populacional2) {
         printf("A densidade populacional da carta 1 venceu!");
-    } else {
+    } else if (densidade_populacional1 > densidade_populacional2) {
         printf("A densidade populacional da carta 2 venceu!");
+    } else {
+        ("Deram empate!");
     }
     break;
     case 6:
     if (pib_per_capita1 > pib_per_capita2) {
         printf(" O PIB per capita da carta 1 venceu!");
-    } else {
+    } else if (pib_per_capita1 < pib_per_capita2) {
         printf("O PIB per capita da carta 2 venceu!");
+    } else {
+        printf("Deram empate!");
     }
     break;
     case 7:
     if (superpoder1 > superpoder2) {
         printf("O super poder da carta 1 venceu!");
-    } else {
+    } else if (superpoder1 < superpoder2) {
         printf("O super poder da carta 2 venceu!");
+    } else {
+        printf("Deram empate!");
     }
     break;
-}
+    default:
+        printf("opção inválida!\n");
+}  
     return 0;
 }
