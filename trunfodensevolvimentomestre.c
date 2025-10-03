@@ -187,11 +187,11 @@ if (escolhaatributo1 == escolhaatributo2)
 }
     printf("O resultado do primeiro atributo é: %d e do segundo é: %d\n", resultado1, resultado2);
     if (resultado1 && resultado2){
-        printf("Parabéns, você venceu!\n");
+        printf("Carta 1 (%s) venceu a comparação!\n", Pais1);
     } else if (resultado1 != resultado2){
-        printf("Empatou!\n");
+        printf("Empate na comparação!\n");
     } else {
-        printf("Infelizmente, você perdeu!\n");
+        printf("Carta 2 (%s) venceu a comparação!\n", Pais2);
     }
     return 0;
 }
